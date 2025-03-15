@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Hero Section */
+.hero {
+  background: url("hero-bg.jpg") no-repeat center center/cover;
+  height: 400px;
+  padding-top: 20px;
+  position: relative; /* Ensures the header stays on top */
+}
+
+/* Header Layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px; /* Remove top-bottom padding to maintain height */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional background color for header */
+  position: fixed; /* Make the header fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%; /* Ensure header takes full width */
+  height: 80px; /* Fixed height for header */
+}
+
+/* Logo Styles */
+.logo {
+  width: 150px; /* Adjust size of the logo */
+  height: 80px;
+  object-fit: contain;
+  /* Vertically center the logo */
+  margin-right: auto; /* Push logo to the left */
+}
+
+/* Navigation Styles */
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f4a261; /* Highlight color on hover */
+}
+
+/* Main Content (Text and Button) */
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 100px; /* To create some space between the logo and title */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.hero .btn-warning {
+  background-color: #f4a261;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.hero .btn-warning:hover {
+  background-color: #e76f51;
+}
+
+/* Section Heading Styles */
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Teachers Section */
+.teachers {
+  background-color: #fff;
+  padding: 50px 0;
+}
+.teacher-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.teacher-card {
+  text-align: center;
+  width: 30%;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+.teacher-card img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.teacher-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.teacher-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.teacher-card:hover {
+  transform: scale(1.05);
+}
+
+/* Weekly Schedule Section */
+.schedule {
+  background-color: #f4f4f9;
+  padding: 50px 0;
+}
+.schedule-table {
+  width: 80%;
+  margin: 0 auto;
+}
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.schedule-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  flex: 1;
+  transition: transform 0.3s;
+}
+.schedule-item:hover {
+  transform: scale(1.05);
+}
+.schedule-item.red {
+  background-color: #ff8a80;
+}
+.schedule-item.yellow {
+  background-color: #ffeb3b;
+}
+.schedule-item.green {
+  background-color: #81c784;
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 50px 0;
+  background-color: #fff;
+}
+.how-it-works p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+.how-it-works ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+.how-it-works ol li {
+  margin-bottom: 10px;
+}
+.app-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.app-buttons a {
+  display: block;
+  width: 150px;
+}
+.app-buttons img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.app-buttons img:hover {
+  transform: scale(1.1);
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 50px 0;
+  background-color: #f4f4f9;
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.gallery-container img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .teacher-card {
+    width: 45%;
+  }
+  .schedule-item {
+    font-size: 1rem;
+  }
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-card {
+    width: 100%;
+  }
+  .schedule-item {
+    font-size: 0.9rem;
+  }
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
