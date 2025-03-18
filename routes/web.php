@@ -8,7 +8,8 @@ Route::get('/', function () {
 });
 
 // Route for the Home page
-Route::get('/home', [HomeController::class, 'home']);
+Route::get('/desktop1', [HomeController::class, 'desktop1']);
 
 // Route for the Contact page
-Route::get('/school', [HomeController::class, 'school']);
+Route::get('/desktop3', [HomeController::class, 'desktop3']);
+Route::get('/desktop4', [HomeController::class, 'desktop4']);

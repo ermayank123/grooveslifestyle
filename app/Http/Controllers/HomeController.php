@@ -6,14 +6,18 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function home()
+    public function desktop1()
     {
-        return view('home');
+        return view('desktop-1');
     }
 
     // Method to show the Contact Us page
-    public function school()
+    public function desktop3()
     {
-        return view('school');
+        return view('desktop-3');
+    }
+    public function desktop4()
+    {
+        return view('desktop-4');
     }
 }
